@@ -1,0 +1,96 @@
+
+.page {
+    margin-top: 66px !important;
+}
+
+.page-games .hero-title {
+    background: transparent !important;
+    height: auto;
+}
+
+#page-clashroyale .hero-title .logo {
+    background: url(./../img/clash-quest.png) no-repeat;
+    background-size: auto 100%;
+    background-position: center top;
+    height: 121px;
+}
+
+.blink {
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0% {
+        border: 3px solid red;
+        box-shadow: 0px 4px rgba(255, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+    50% {
+        border: 3px solid white;
+        box-shadow: 0px 4px rgba(255, 255, 255, 1);
+        border-radius: 10px;
+    }
+    100% {
+        border: 3px solid red;
+        box-shadow: 0px 4px rgba(255, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+}
+
+#page-clashroyale .m-introduction .deco {
+    background: url(./../img/clash-quest-phone.jpg) no-repeat;
+    background-size: auto 100%;
+}
+
+.page-games .m-introduction .copy .appstores a.aptoide{
+    width: 166px;
+    height: 50px;
+    background: url(./../img/footer_aptoide.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.page-games .m-introduction .copy .appstores a.online{
+    width: 166px;
+    height: 50px;
+    background: url(./../img/footer_online_2.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.page-games .m-introduction .copy .appstores a.download{
+    width: 166px;
+    height: 50px;
+    background: url(./../img/footer_download.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.page-games .m-introduction .copy .appstores a.appstore {
+    width: 166px;
+    height: 50px;
+    background: url(./../img/footer_appstore.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.page-games .m-introduction .copy .appstores a.googleplay {
+    width: 166px;
+    height: 50px;
+    background: url(./../img/footer_googleplay.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.footer-end {
+    height: 5px;
+    margin: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+    .footer-end {
+        height: 30px;
+        margin: 0 !important;
+    }
+}
+
+.page-games .m-gamewebsite .copy h2, 
+.page-games .m-gamewebsite .copy,
+.page-games .m-gamewebsite .copy h4 {
+    color: black !important;
+}

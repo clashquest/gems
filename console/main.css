@@ -1,0 +1,994 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+@font-face {
+    font-family: BrawlStars;
+    src: url("../font/font.ttf");
+}
+
+:root {
+    --background-color: #2487ec;
+    --white: white;
+    --button-primary: #ecc508;
+    --button-shadow-top: #faeb42;
+    --button-shadow-bottom: #9e572d;
+    --button-span-size: 70%;
+    --container-body-background-color: #105ce5;
+    --container-side-background-color: #258cf5;
+    --brawl-chromatic: #f88f25;
+    --brawl-red: #f01919;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+
+    font-family: "Lilita One";
+    text-shadow: 1.5px 0px 0 #000, 0px -3px 0 #000, -3px 0px 0 #000, -1px 2px 0 #000, -1px 4px 0 #000, 1.5px 4px 0 #000,
+        -3px 4px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, 4px 3px 0 #000, 0px 6px 0 #000, 3px 6px 0 #000,
+        -3px 6px 0 #000;
+}
+/*, -1px -2px 0 #000, -3px 0px 0 #000, -3px 3px 0 #000, 2px 0px 0 #000;*/
+body {
+    margin: 0;
+
+    background-color: var(--background-color) !important;
+
+    /*background-image: url("../img/background.jpg");*/
+    background-size: 120%;
+    background-repeat: no-repeat;
+
+    padding-bottom: 95px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+b,
+p,
+div,
+th {
+    color: white;
+}
+
+.title-console {
+    color: white;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+    padding: 40px 30px 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-console span {
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+}
+
+img {
+    width: 100%;
+}
+
+div.container.logo {
+    box-shadow: none;
+    border: none;
+}
+
+div.container.logo .container-header {
+    background-color: transparent !important;
+    text-align: center;
+    padding: 20px 0 0 0 !important;
+}
+
+div.container.logo .container-header a {
+    margin: auto;
+}
+
+div.container.logo .container-header img {
+    width: 200px !important;
+    margin: auto;
+}
+
+div.container {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+}
+
+div.container > .container-header {
+    width: 100%;
+    min-height: 80px;
+    height: auto;
+    background-color: var(--container-side-background-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+div.container > .container-header > .title {
+    margin: 0 auto;
+}
+
+div.container > .container-header > .shadow {
+    position: absolute;
+    height: 7px;
+    width: 100%;
+}
+
+div.container > .container-header > .shadow-xs {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+}
+
+div.container > .container-header > .shadow-bottom {
+    bottom: 0;
+}
+
+div.container > .container-header > .shadow-25 {
+    background-color: rgba(0, 0, 0, 0.25);
+    bottom: 0;
+}
+
+div.container > .container-header > .shadow-40 {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+div.container > .container-footer {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: var(--container-side-background-color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+div.container > .container-footer > table,
+div.container > .container-footer > table tr {
+    margin: 0 auto;
+    width: fit-content !important;
+}
+
+div.container > .container-footer > table th {
+    font-size: 18px;
+    text-align: center;
+}
+
+div.container > .container-footer > table td {
+    text-align: center;
+    font-size: 17px;
+}
+
+div.container > .container-footer > table.table-horizontal tr td:first-child {
+    color: var(--brawl-chromatic) !important;
+}
+
+div.container > .container-footer > table.table-horizontal tr td:nth-child(2) {
+    color: var(--container-side-background-color) !important;
+}
+
+div.container > .container-footer > table.table-horizontal tr td:last-child {
+    color: #00cd00 !important;
+}
+
+div.container > .container-footer > table.table-vertical tr:first-child td:nth-child(2) {
+    color: var(--brawl-chromatic) !important;
+}
+
+div.container > .container-footer > table.table-vertical tr:nth-child(2) td:nth-child(2) {
+    color: var(--container-side-background-color) !important;
+}
+
+div.container > .container-footer > table.table-vertical tr:last-child td:nth-child(2) {
+    color: #00cd00 !important;
+}
+
+div.container > .container-body {
+    width: 100%;
+    height: auto;
+    padding: 30px 10px;
+    background-color: var(--container-body-background-color);
+}
+
+.generate {
+    width: 100%;
+    text-align: center;
+}
+
+.text-no-shadow {
+    text-shadow: none;
+}
+
+.alarm {
+    width: 100%;
+    height: auto;
+    background-color: #ff7f7f;
+    padding: 10px;
+    font-size: 18px;
+    text-shadow: none;
+    line-height: 1.1em;
+    color: black;
+}
+
+.alarm h5 {
+    text-shadow: none;
+}
+
+.brawlStars-btn {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+}
+
+.brawlStars-btn .btn-text {
+    margin: 15px 70px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -ms-transform: skewX(5deg);
+    -webkit-transform: skewX(5deg);
+    transform: skewX(5deg);
+    display: inline-block;
+}
+
+.brawlStars-btn:active {
+    transform: scale(0.97);
+}
+
+.brawlStars-btn > .shadow {
+    position: absolute;
+    height: 7px;
+    width: 100%;
+}
+
+.brawlStars-btn > .shadow-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 0;
+}
+
+.brawlStars-btn > .shadow-bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(158, 87, 45, 0.6);
+    bottom: 0;
+}
+
+.brawlStars-btn-primary {
+    color: white;
+    background-color: var(--button-primary);
+}
+
+.brawlpass-icon {
+    width: 150px;
+}
+
+.gem-icon {
+    width: 60px;
+}
+
+.gift {
+    text-align: center;
+    align-items: center;
+    width: 60%;
+    margin: auto !important;
+    margin-top: 30px !important;
+}
+
+.gift div:first-child {
+    padding-right: 0px;
+}
+
+.gift div:first-child img {
+    float: right;
+}
+
+.gift div:last-child h1 {
+    float: left;
+}
+
+input.brawlstars-comment-input {
+    margin: 0 auto;
+    text-indent: 10px;
+
+    height: 70px !important;
+    font-size: 30px !important;
+    color: #eee !important;
+    text-shadow: none;
+
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+    background-color: lightgray;
+}
+
+div.brawlstars-comment {
+    height: auto;
+    padding: 0 10px;
+    width: 100%;
+}
+
+div.brawlstars-comment > ul {
+    list-style: none;
+    padding: 0 !important;
+    width: 100%;
+    position: relative !important;
+}
+
+div.brawlstars-comment > ul > li {
+    color: var(--brawl-chromatic);
+    height: 90px !important;
+    max-height: 90px !important;
+}
+
+div.brawlstars-comment > ul > li > h3 {
+    color: var(--brawl-chromatic);
+}
+
+div.brawlstars-comment > ul > li > p {
+    font-size: 25px;
+    padding: 0 5px;
+    list-style-position: inside;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.how-to {
+    font-size: 20px;
+}
+
+div.how-to > p {
+    padding: 0 18px;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+}
+
+div.how-to > p > span {
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+}
+
+.whatsapp-share {
+    width: fit-content;
+    height: auto;
+    background-color: rgb(37, 211, 102);
+    border-radius: 5px;
+    border: 3px solid black;
+    padding: 10px;
+    color: white;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+}
+
+.whatsapp-share img {
+    width: 80px;
+    margin-top: -5px;
+}
+
+.whatsapp-share:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(33, 189, 91);
+}
+
+input.brawlstars-username {
+    margin: auto;
+    text-indent: 60px;
+
+    height: 70px !important;
+    font-size: 40px !important;
+    color: white !important;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+    caret-color: black;
+
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+
+    margin-bottom: 15px;
+}
+
+input.brawlstars-username:before {
+    display: block;
+    content: "Some";
+}
+
+input.brawlstars-username:active,
+input.brawlstars-username:focus {
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+
+    text-shadow: 1.5px 0px 0 #000, 0px -3px 0 #000, -3px 0px #000, -1px 2px 0 #000, -1px 4px 0 #000, 1.5px 4px 0 #000,
+        -3px 4px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, 4px 3px 0 #000, 0px 6px 0 #000, 3px 6px 0 #000,
+        -3px 6px 0 #000;
+}
+
+input.brawlstars-username::placeholder {
+    color: #d6d6d6;
+    text-shadow: 1.5px 0px 0 #bebebe, 0px -3px 0 #bebebe, -3px 0px #bebebe, -1px 2px 0 #bebebe, -1px 4px 0 #bebebe,
+        1.5px 4px 0 #bebebe, -3px 4px 0 #bebebe, -3px -3px 0 #bebebe, 3px -3px 0 #bebebe, 4px 3px 0 #bebebe,
+        0px 6px 0 #bebebe, 3px 6px 0 #bebebe, -3px 6px 0 #bebebe;
+}
+
+.error-username-blinking {
+    animation: blinkingErrorUsername 1.2s infinite;
+}
+
+@keyframes blinkingErrorUsername {
+    0% {
+        border: 3px solid red;
+        box-shadow: 0px 4px rgba(255, 0, 0, 0.7);
+    }
+    50% {
+        border: 3px solid black;
+        box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        border: 3px solid red;
+        box-shadow: 0px 4px rgba(255, 0, 0, 0.7);
+    }
+}
+
+.error-hashtag-blinking {
+    animation: blinkingErrorHashtag 1.2s infinite;
+}
+
+@keyframes blinkingErrorHashtag {
+    0% {
+        text-shadow: 1.5px 0px 0 red, 0px -3px 0 red, -3px 0px 0 red, -1px 2px 0 red, -1px 4px 0 red, 1.5px 4px 0 red,
+            -3px 4px 0 red, -3px -3px 0 red, 3px -3px 0 red, 4px 3px 0 red, 0px 6px 0 red, 3px 6px 0 red, -3px 6px 0 red;
+    }
+    50% {
+        text-shadow: 1.5px 0px 0 #000, 0px -3px 0 #000, -3px 0px #000, -1px 2px 0 #000, -1px 4px 0 #000,
+            1.5px 4px 0 #000, -3px 4px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, 4px 3px 0 #000, 0px 6px 0 #000,
+            3px 6px 0 #000, -3px 6px 0 #000;
+    }
+    100% {
+        text-shadow: 1.5px 0px 0 red, 0px -3px 0 red, -3px 0px 0 red, -1px 2px 0 red, -1px 4px 0 red, 1.5px 4px 0 red,
+            -3px 4px 0 red, -3px -3px 0 red, 3px -3px 0 red, 4px 3px 0 red, 0px 6px 0 red, 3px 6px 0 red, -3px 6px 0 red;
+    }
+}
+
+.username-explanation p {
+    display: none;
+}
+
+.username-explanation {
+    font-size: 18px;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+    text-align: center;
+}
+
+.username-explanation p {
+    text-shadow: -2px 2px 0 red, 2px 2px 0 red, 0 -2px 0 red, -2px -2px 0 red;
+}
+
+.hashtag {
+    position: absolute;
+    z-index: 2;
+    font-size: 45px;
+    margin-left: 3%;
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+
+    background: -moz-linear-gradient(
+        left,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+        left,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 80%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+}
+
+.hashtag p {
+    margin-top: -5px;
+    margin-left: 0px;
+}
+
+.brawlStars-console-div {
+    width: 90%;
+    margin: auto;
+
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+}
+
+.brawlStars-console {
+    height: 250px !important;
+
+    border-radius: 10px;
+    caret-color: white;
+
+    border: 3px solid #00cd00 !important;
+
+    background-color: black !important;
+
+    font-size: 20px !important;
+    color: #fff !important;
+
+    overflow-y: hidden;
+
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600 !important;
+
+    line-height: initial !important;
+}
+
+.brawlStars-console span {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600 !important;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none !important;
+    margin-bottom: 20px;
+}
+
+div.brawlStars-news {
+    width: 90%;
+    height: 50px;
+    line-height: 40px;
+    margin: 30px auto 20px auto;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 4px solid var(--brawl-red);
+
+    border-radius: 10px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.7);
+
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+
+    max-width: 800px;
+
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+.brawlStars-news-content {
+    width: 100%;
+    white-space: no-wrap;
+    overflow: hidden;
+}
+
+.brawlStars-news-content > p {
+    white-space: nowrap;
+    display: inline;
+    width: auto;
+}
+
+.brawlStars-news-title {
+    width: auto;
+    height: 70px;
+    line-height: 65px;
+    position: fixed;
+    margin-top: -15px;
+    margin-left: 0px;
+    border: 4px solid white;
+    text-transform: uppercase;
+    padding: 0 25px;
+    font-size: 25px;
+    background-color: var(--button-primary);
+
+    border-radius: 10px;
+    box-shadow: 0px 4px rgba(255, 255, 255, 0.7);
+
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.brawlstars-sites {
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    font-size: 22px;
+}
+
+.brawlstars-sites-services {
+    height: 40px;
+    width: 100%;
+    background-color: orange;
+    text-shadow: none;
+    color: black;
+    border-top: 4px solid white;
+}
+
+.brawlstars-sites ul {
+    height: 50px;
+}
+
+.brawlstars-sites .list-group-item {
+    border-radius: 0px !important;
+    cursor: pointer;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    color: black;
+}
+
+.brawlstars-sites .list-group-item a {
+    text-shadow: none;
+}
+
+.brawlstars-sites .list-group-item:hover {
+    background-color: #eee;
+}
+
+.blinking-new-services {
+    animation: blinkingNewServices 1.2s infinite;
+}
+
+.cardHackGift {
+    background: rgb(37, 140, 245);
+    background: radial-gradient(circle, rgba(37, 140, 245, 1) 0%, rgba(63, 124, 234, 1) 55%, rgba(16, 92, 229, 1) 100%);
+
+    border: 5px solid black !important;
+    box-shadow: inset;
+
+    -webkit-box-shadow: -1px 15px 9px -10px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: -1px 15px 9px -10px rgba(0, 0, 0, 0.59);
+    box-shadow: -1px 15px 9px -10px rgba(0, 0, 0, 0.59);
+}
+
+@keyframes blinkingNewServices {
+    0% {
+        color: red;
+    }
+    50% {
+        color: black;
+    }
+    100% {
+        color: red;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .container {
+        width: 98% !important;
+        padding: 0;
+    }
+
+    .gift {
+        width: 100%;
+    }
+
+    .brawl-character-div {
+        margin: 0 auto 15px auto;
+    }
+
+    .gift div:first-child {
+        padding-right: 15px;
+    }
+
+    .gift div:first-child img {
+        float: none;
+    }
+
+    .gift div:last-child h1 {
+        float: none;
+    }
+
+    .brawlstars-sites {
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+    }
+
+    .check-character,
+    .check-character svg path {
+        margin-left: 0;
+    }
+
+    .brawl-gem-div {
+        margin: 0 auto 15px auto !important;
+    }
+
+    .check-gem,
+    .check-gem svg path {
+        margin-left: 0;
+    }
+}
+
+/** ---------------------------------------------- BRAWL CHARACTER ---------------------------------------------- **/
+
+.re-brawl {
+    border: 3px solid black !important;
+    font-size: 20px !important;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+    text-transform: uppercase;
+}
+
+.character-explanation p {
+    display: none;
+}
+.character-explanation {
+    font-size: 18px;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+    text-align: center;
+}
+.character-explanation p {
+    text-shadow: -2px 2px 0 red, 2px 2px 0 red, 0 -2px 0 red, -2px -2px 0 red;
+}
+
+.brawl-character-div {
+    width: 70px;
+    border-radius: 5px;
+    border: 3px solid var(--brawl-chromatic);
+    margin-bottom: 10px;
+    box-shadow: -3px 6px rgba(0, 0, 0, 0.7), 3px 6px rgba(0, 0, 0, 0.7), -3px -3px rgba(0, 0, 0, 0.7),
+        3px -2px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+}
+.brawl-character-div.active {
+    width: 70px;
+    border-radius: 5px;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    box-shadow: -3px 6px rgba(0, 205, 0, 0.7), 3px 6px rgba(0, 205, 0, 0.7), -3px -3px rgba(0, 205, 0, 0.7),
+        3px -2px rgba(0, 205, 0, 0.7);
+    cursor: pointer;
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+}
+.check-character,
+.check-character svg path {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -12px;
+    z-index: 2;
+    border: 3px solid black;
+    border-radius: 50%;
+    color: rgba(0, 205, 0, 0.7) !important;
+    background-color: white;
+}
+.character-new {
+    position: absolute;
+    text-align: right;
+}
+.character-new span {
+    position: relative;
+    padding: 3px;
+    text-shadow: -1px 1px 0 black, 1px 1px 0 black, 0 -1px 0 black, -1px -1px 0 black;
+    font-family: verdana;
+    text-transform: uppercase;
+    margin-top: -10px;
+    margin-left: 80px;
+    border: 2px solid black;
+    background-color: #00cd00;
+    font-weight: bold;
+}
+
+.then-explanation p {
+    display: none;
+}
+.then-explanation {
+    font-size: 18px;
+    text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 0 -2px 0 #000, -2px -2px 0 #000;
+    text-align: center;
+}
+.then-explanation p {
+    text-shadow: -2px 2px 0 red, 2px 2px 0 red, 0 -2px 0 red, -2px -2px 0 red;
+}
+
+/** ---------------------------------------------- BRAWL GEMS ---------------------------------------------- **/
+
+.brawl-gem-div {
+    width: auto;
+    border-radius: 5px;
+    border: 3px solid var(--brawl-chromatic);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    box-shadow: -3px 6px rgba(0, 0, 0, 0.7), 3px 6px rgba(0, 0, 0, 0.7), -3px -3px rgba(0, 0, 0, 0.7),
+        3px -2px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    background-color: white;
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+}
+.brawl-gem-div h2 {
+    text-align: center;
+    margin-bottom: none !important;
+}
+.brawl-gem-div img {
+    width: 30px;
+    margin: 5px;
+}
+.brawl-gem-div.active {
+    width: auto;
+    border-radius: 5px;
+    border: 3px solid black;
+    margin-bottom: 10px;
+    box-shadow: -3px 6px rgba(0, 205, 0, 0.7), 3px 6px rgba(0, 205, 0, 0.7), -3px -3px rgba(0, 205, 0, 0.7),
+        3px -2px rgba(0, 205, 0, 0.7);
+    cursor: pointer;
+    -ms-transform: skewX(-4deg);
+    -webkit-transform: skewX(-4deg);
+    transform: skewX(-4deg);
+}
+.check-gem,
+.check-gem svg path {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -12px;
+    z-index: 2;
+    border: 3px solid black;
+    border-radius: 50%;
+    color: rgba(0, 205, 0, 0.7) !important;
+    background-color: white;
+}
+.gem-new {
+    position: absolute;
+    text-align: right;
+}
+.gem-new span {
+    position: relative;
+    padding: 3px;
+    text-shadow: -1px 1px 0 black, 1px 1px 0 black, 0 -1px 0 black, -1px -1px 0 black;
+    font-family: verdana;
+    text-transform: uppercase;
+    margin-top: -30px;
+    border: 2px solid black;
+    background-color: #00cd00;
+    font-weight: bold;
+}
+
+#modalConnect .modal-content,
+#modalGenerate .modal-content {
+    border: 3px solid white;
+    -webkit-box-shadow: 0px 0px 17px -1px black;
+    -moz-box-shadow: 0px 0px 17px -1px black;
+    box-shadow: 0px 0px 17px -1px black;
+    text-align: center;
+    background-color: #162548;
+}
+#modalConnect .modal-content .modalTitle,
+#modalConnect .modal-content .modalDescription,
+#modalConnect .modal-content b,
+#modalGenerate .modal-content .modalTitle,
+#modalGenerate .modal-content .modalDescription,
+#modalGenerate .modal-content b {
+    font-family: "Lilita One";
+    text-shadow: 3px 3px 0 #353535;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#modalConnect .modal-content .modalTitle,
+#modalGenerate .modal-content .modalTitle {
+    font-size: 1.5em;
+}
+#modalConnect .modal-content .modalDescription,
+#modalGenerate .modal-content .modalDescription {
+    font-size: 1.4em;
+}
+#modalConnect .modal-content b,
+#modalGenerate .modal-content b {
+    color: #ffbc2b;
+}
+#modalConnect .modal-content .modalInjection,
+#modalGenerate .modal-content .modalInjection {
+    background-color: #0b1837;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+#modalConnect .modal-body,
+#modalGenerate .modal-body {
+    -webkit-box-shadow: 0px 0px 10px -1px black;
+    -moz-box-shadow: 0px 0px 10px -1px black;
+    box-shadow: 0px 0px 10px -1px black;
+}
+#modalConnect .modal-body .btn-goto-locker,
+#modalGenerate .modal-body .btn-goto-locker {
+    font-size: 1em;
+}
+#modalConnect .modal-body .lastSteps,
+#modalGenerate .modal-body .lastSteps {
+    list-style-type: none;
+    padding: 0;
+}
+#modalConnect .modal-body .lastSteps li,
+#modalGenerate .modal-body .lastSteps li {
+    background: #0b1837;
+    padding: 15px;
+    margin: 25px 0 0 0;
+    border-radius: 3px;
+    counter-increment: inst;
+}
+#modalConnect .modal-body .lastSteps li::before,
+#modalGenerate .modal-body .lastSteps li::before {
+    content: counter(inst);
+    background-color: #ffbc2b;
+    color: #000;
+    margin-top: -30px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 3px 8px;
+    border-radius: 50%;
+    font-weight: 900;
+}
+#modalConnect .modal-body .textSecure,
+#modalConnect .modal-body .lastSteps,
+#modalGenerate .modal-body .textSecure,
+#modalGenerate .modal-body .lastSteps {
+    font-family: "Lilita One";
+    font-weight: 700;
+}
+#modalConnect .modal-footer,
+#modalGenerate .modal-footer {
+    background-color: #0b1837;
+    border: 0;
+}
